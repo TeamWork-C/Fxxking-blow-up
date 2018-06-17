@@ -5,30 +5,37 @@
 #define pi 3.14159265359
 #define g 9.8
 
-void fine(struct flight *flight)
+double fine(double a, double V, int x)
 {
-	double Vx, Vy, t, H, R;
+	double Vx, Vy, t, h, r;
   
 	Vx = V*cos(a*pi/180);
 
 	Vy = V*sin(a*pi/180);
-
-	t = 2*Vy/g;
-	printf("Time t = %lf\n",t);
-
-	H = pow(Vy, 2)/(2 * g);
-	printf("Hight H = %lf\n",H);
-
-	R = pow(V, 2)*sin(a*2*pi/180)/g;
-
-	return R;
+    
+    switch (x)
+    {
+        case 1:
+            t = 2*Vy/g;
+            return t;
+            break;
+        case 2:
+            h = pow(Vy, 2)/(2 * g);
+            return h;
+        case 3:
+            r = pow(V, 2)*sin(a*2*pi/180)/g;
+            return r;
+        default:
+            return -1;
+            break;
+    }
 }
 
-void how(double a, double V)
+
+double how(double a, double V)
 {
     int i;
-    double t,Vy,Vx,x,y;
-
+    double t, Vy, Vx, x, y;
     Vx = V*cos(a*pi/180);
 
     Vy = V*sin(a*pi/180);
