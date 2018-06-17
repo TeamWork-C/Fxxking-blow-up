@@ -5,7 +5,7 @@
 #define pi 3.14159265359
 #define g 9.8
 
-double fine(double a, double V, int x)
+double fine(double a, double V, int x)//x=1, return t; x=2, return h; x=3, return range
 {
 	double Vx, Vy, t, h, r;
   
@@ -30,7 +30,6 @@ double fine(double a, double V, int x)
             break;
     }
 }
-
 
 double how(double a, double V)
 {

@@ -1,11 +1,8 @@
-#ifndef Projectfine
-#define Projectfine
-
+#ifndef crash
+#define crash
 
 double fine(double a, double V, int x);
 
-
-void how(double a, double v);
-
+double how(double a, double v);
 
 #endif
