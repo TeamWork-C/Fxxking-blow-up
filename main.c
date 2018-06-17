@@ -6,13 +6,15 @@ double dis;
 double ang_a, ang_b;
 double Va, Vb;
 
+void cul();
+
 int main()
 {
-    printf("   Va               |               Vb");
-    printf("   /                |                \ ");
-    printf("  /                 |                 \ ");
-    printf(" /  ang_a           |           ang_b  \ ");
-    printf("/————————————       |       ————————————\ ");
+    printf("   Va               |               Vb\n");
+    printf("   /                |                \\n ");
+    printf("  /                 |                 \\n ");
+    printf(" /  ang_a           |           ang_b  \\n ");
+    printf("/————————————       |       ————————————\\n ");
 
     printf("Input the distance\n"); //give distance a value
     scanf("%lf", &dis);
@@ -27,7 +29,12 @@ int main()
     printf("Input the Vb\n");
     scanf("%lf", &Vb);
 
-
+    cul();
 
     return 0;
+}
+
+void cul()
+{
+    
 }
